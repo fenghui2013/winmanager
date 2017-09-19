@@ -1062,6 +1062,8 @@ function! <SID>ToggleWindowsManager()
 		call s:CloseWindowsManager()
 	else
 		call s:StartWindowsManager()
+		" fix a bug: open a window
+		exe 'q'
 	end
 endfunction
 
